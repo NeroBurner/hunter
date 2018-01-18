@@ -226,6 +226,21 @@ matrix:
       env: PROJECT_DIR=examples/Boost-math TOOLCHAIN=gcc-5
     # }
 
+    # Boost-fiber {
+    - os: linux
+      env: PROJECT_DIR=examples/Boost-fiber TOOLCHAIN=default
+    - os: linux
+      env: PROJECT_DIR=examples/Boost-fiber TOOLCHAIN=clang-libstdcxx
+    - os: linux
+      env: PROJECT_DIR=examples/Boost-fiber TOOLCHAIN=gcc-5
+    - os: linux
+      env: PROJECT_DIR=examples/Boost-fiber TOOLCHAIN=analyze
+    - os: linux
+      env: PROJECT_DIR=examples/Boost-fiber TOOLCHAIN=sanitize-address
+    - os: linux
+      env: PROJECT_DIR=examples/Boost-fiber TOOLCHAIN=sanitize-leak
+    # }
+
     # }
 
     # OSX {
