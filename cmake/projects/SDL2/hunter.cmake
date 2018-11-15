@@ -138,6 +138,17 @@ hunter_add_version(
         580a574f6da1634500448dddf4a73b80c54d168c
 )
 
+hunter_add_version(
+        PACKAGE_NAME
+        SDL2
+        VERSION
+        "2.0.9"
+        URL
+		"https://github.com/NeroBurner/SDL2/archive/hunter-2.0.9_nb_dev.zip"
+        SHA1
+        e386e5ef4397865e51bf1eabd38cb3cd9acf2432
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(SDL2)
 hunter_download(PACKAGE_NAME SDL2)
