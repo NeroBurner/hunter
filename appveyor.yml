@@ -10,21 +10,21 @@ environment:
 
     # FIXME: C++17 removed random_shuffle
     # * https://ci.appveyor.com/project/NeroBurner/hunter/builds/20497834/job/d63u56pyy14duhv6
-    #- TOOLCHAIN: "ninja-vs-15-2017-win64-cxx17"
-    #  PROJECT_DIR: examples\ceres-solver
-    #  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    - TOOLCHAIN: "ninja-vs-15-2017-win64-cxx17"
+      PROJECT_DIR: examples\ceres-solver
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     # FIXME: C++17 removed random_shuffle
     # * https://ci.appveyor.com/project/NeroBurner/hunter/builds/20497834/job/ljsteo7780r1jrch
-    #- TOOLCHAIN: "nmake-vs-15-2017-win64-cxx17"
-    #  PROJECT_DIR: examples\ceres-solver
-    #  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    - TOOLCHAIN: "nmake-vs-15-2017-win64-cxx17"
+      PROJECT_DIR: examples\ceres-solver
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     # FIXME: C++17 removed random_shuffle
     # * https://ci.appveyor.com/project/NeroBurner/hunter/builds/20497834/job/ljsteo7780r1jrch
-    #- TOOLCHAIN: "vs-15-2017-win64-cxx17"
-    #  PROJECT_DIR: examples\ceres-solver
-    #  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    - TOOLCHAIN: "vs-15-2017-win64-cxx17"
+      PROJECT_DIR: examples\ceres-solver
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     - TOOLCHAIN: "vs-14-2015-sdk-8-1"
       PROJECT_DIR: examples\ceres-solver
@@ -45,19 +45,19 @@ environment:
     # ceres-solver-suitesparse-dynLAPACK {
 
     # FIXME: ceres without suitesparse already failed
-    #- TOOLCHAIN: "ninja-vs-15-2017-win64-cxx17"
-    #  PROJECT_DIR: examples\ceres-solver-suitesparse-dynLAPACK
-    #  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    - TOOLCHAIN: "ninja-vs-15-2017-win64-cxx17"
+      PROJECT_DIR: examples\ceres-solver-suitesparse-dynLAPACK
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     # FIXME: ceres without suitesparse already failed
-    #- TOOLCHAIN: "nmake-vs-15-2017-win64-cxx17"
-    #  PROJECT_DIR: examples\ceres-solver-suitesparse-dynLAPACK
-    #  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    - TOOLCHAIN: "nmake-vs-15-2017-win64-cxx17"
+      PROJECT_DIR: examples\ceres-solver-suitesparse-dynLAPACK
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     # FIXME: ceres without suitesparse already failed
-    #- TOOLCHAIN: "vs-15-2017-win64-cxx17"
-    #  PROJECT_DIR: examples\ceres-solver-suitesparse-dynLAPACK
-    #  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    - TOOLCHAIN: "vs-15-2017-win64-cxx17"
+      PROJECT_DIR: examples\ceres-solver-suitesparse-dynLAPACK
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     # FIXME: no prebuild LAPACK for 32bit on windows
     # * https://ci.appveyor.com/project/NeroBurner/hunter/builds/20497834/job/hvq21bwpbb8bs57m
