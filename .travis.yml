@@ -30,14 +30,13 @@ env:
   global:
     - secure: "DJPGduVmEHr3v/n+4DlCBud5gDgoAo6FKcLO9lWKQ1aBkiK8qXttTr7XDIZ/CgnWBKjp3YiwteKAQrQZPlNRza7Cm4J74SqAXHt/SQuRLy7p4X7XM71UQ3YNllXl1WTmEEPLznVOoR0za1PEcvjeHlLJ2Bk9CqnCQbWt4ie35hBUv1v2Ft9M4mw+oZJElWrVY7COudF4bPFd/AaVMmsohjRIyKG8bgcnsl1RtI/tTZbFQn6VIz8Jf/P+uULB2B+ddPMpXSCBxxLsNupZ3ddEl5hfdH4FGFrlUaj47zj+1s6rG38DsIX4pT0/jXZxJ8hkvqn/QOd1lprAAgnSbgsBd2tWLUYQHG+mfaRFpG0WzVzNZpx1sjyroKEi8mbusYrENuzmhWCs3GNVSe0bImfLnfnaoRiKHloTtaTp+RNf9ftiSCRyyr9OKCJvK9fUzyYZeCZBGzYzlrsY3AgbyBYTQMrK8NwImuTMWpWCPfP8Lb/gy2+1W+AouASF8w3nzObJxe/R/3XvjCYABMmgo34YXv/Qzv8kpQW7PSJgYXDdjx9dNgrnlwz5PxjoXAkGd3BEIFRMBMSYwOJPA4ZIXbojCJ9yGXHSSJZLO+5qdtt35/EhLQJkZBe1Cx0YordYuqDLS9rN3iaxPoI2zIYVEBQbrjFBLgwivoZNV+D2hx0WsGc="
     - HUNTER_JOBS_NUMBER: 4
-    - VERBOSE: 0
 
 matrix:
   include:
     # Linux {
 
-    # FIXME: missing OpenMP include on clang
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574459
+    # FIXME: missing pthreads
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029637
     #- os: linux
     #  env: >
     #    TOOLCHAIN=clang-cxx17
@@ -48,36 +47,36 @@ matrix:
         TOOLCHAIN=gcc-7-cxx17
         PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: missing OpenMP
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574461
+    # FIXME: missing pthreads
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029639
     #- os: linux
     #  env: >
     #    TOOLCHAIN=android-ndk-r17-api-24-arm64-v8a-clang-libcxx14
     #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574462
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029640
     #- os: linux
     #  env: >
     #    TOOLCHAIN=analyze-cxx17
     #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574463
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029641
     #- os: linux
     #  env: >
     #    TOOLCHAIN=sanitize-address-cxx17
     #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574464
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029642
     #- os: linux
     #  env: >
     #    TOOLCHAIN=sanitize-leak-cxx17
     #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574465
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029643
     # - os: linux
     #- os: linux
     #  env: >
@@ -101,7 +100,7 @@ matrix:
         PROJECT_DIR=examples/ceres-solver
 
     # FIXME: Unsupported iOS version: , Ceres requires at least iOS version 7.0
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574468
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029648
     #- os: osx
     #  osx_image: xcode9.4
     #  env: >
