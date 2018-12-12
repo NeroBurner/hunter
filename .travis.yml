@@ -35,53 +35,53 @@ matrix:
   include:
     # Linux {
 
-    # FIXME: missing OpenMP include on clang
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574459
-    - os: linux
-      env: >
-        TOOLCHAIN=clang-cxx17
-        PROJECT_DIR=examples/ceres-solver
+    # FIXME: missing pthreads
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029637
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=clang-cxx17
+    #    PROJECT_DIR=examples/ceres-solver
 
     - os: linux
       env: >
         TOOLCHAIN=gcc-7-cxx17
         PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: missing OpenMP
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574461
-    - os: linux
-      env: >
-        TOOLCHAIN=android-ndk-r17-api-24-arm64-v8a-clang-libcxx14
-        PROJECT_DIR=examples/ceres-solver
+    # FIXME: missing pthreads
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029639
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=android-ndk-r17-api-24-arm64-v8a-clang-libcxx14
+    #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574462
-    - os: linux
-      env: >
-        TOOLCHAIN=analyze-cxx17
-        PROJECT_DIR=examples/ceres-solver
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029640
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=analyze-cxx17
+    #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574463
-    - os: linux
-      env: >
-        TOOLCHAIN=sanitize-address-cxx17
-        PROJECT_DIR=examples/ceres-solver
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029641
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=sanitize-address-cxx17
+    #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574464
-    - os: linux
-      env: >
-        TOOLCHAIN=sanitize-leak-cxx17
-        PROJECT_DIR=examples/ceres-solver
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029642
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=sanitize-leak-cxx17
+    #    PROJECT_DIR=examples/ceres-solver
 
-    # FIXME: issue with glog
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574465
+    # FIXME: reevaluate when clang is working (pthreads)
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029643
     # - os: linux
-    - os: linux
-      env: >
-        TOOLCHAIN=sanitize-thread-cxx17
-        PROJECT_DIR=examples/ceres-solver
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=sanitize-thread-cxx17
+    #    PROJECT_DIR=examples/ceres-solver
 
     # }
 
@@ -100,12 +100,12 @@ matrix:
         PROJECT_DIR=examples/ceres-solver
 
     # FIXME: Unsupported iOS version: , Ceres requires at least iOS version 7.0
-    # * https://travis-ci.org/NeroBurner/hunter/jobs/458574468
-    - os: osx
-      osx_image: xcode9.4
-      env: >
-        TOOLCHAIN=ios-nocodesign-11-4-dep-9-3
-        PROJECT_DIR=examples/ceres-solver
+    # * https://travis-ci.org/NeroBurner/hunter/jobs/467029648
+    #- os: osx
+    #  osx_image: xcode9.4
+    #  env: >
+    #    TOOLCHAIN=ios-nocodesign-11-4-dep-9-3
+    #    PROJECT_DIR=examples/ceres-solver
 
     # }
 
@@ -114,10 +114,10 @@ matrix:
     # Linux {
 
     # FIXME: build without suitesparse is failing
-    - os: linux
-      env: >
-        TOOLCHAIN=clang-cxx17
-        PROJECT_DIR=examples/ceres-solver-suitesparse
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=clang-cxx17
+    #    PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: https://travis-ci.org/ingenue/hunter/jobs/467488050
     #- os: linux
@@ -126,34 +126,34 @@ matrix:
     #    PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    - os: linux
-      env: >
-        TOOLCHAIN=android-ndk-r17-api-24-arm64-v8a-clang-libcxx14
-        PROJECT_DIR=examples/ceres-solver-suitesparse
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=android-ndk-r17-api-24-arm64-v8a-clang-libcxx14
+    #    PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    - os: linux
-      env: >
-        TOOLCHAIN=analyze-cxx17
-        PROJECT_DIR=examples/ceres-solver-suitesparse
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=analyze-cxx17
+    #    PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    - os: linux
-      env: >
-        TOOLCHAIN=sanitize-address-cxx17
-        PROJECT_DIR=examples/ceres-solver-suitesparse
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=sanitize-address-cxx17
+    #    PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    - os: linux
-      env: >
-        TOOLCHAIN=sanitize-leak-cxx17
-        PROJECT_DIR=examples/ceres-solver-suitesparse
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=sanitize-leak-cxx17
+    #    PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    - os: linux
-      env: >
-        TOOLCHAIN=sanitize-thread-cxx17
-        PROJECT_DIR=examples/ceres-solver-suitesparse
+    #- os: linux
+    #  env: >
+    #    TOOLCHAIN=sanitize-thread-cxx17
+    #    PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # }
 
