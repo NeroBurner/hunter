@@ -57,32 +57,32 @@ matrix:
 
     # FIXME: issue with glog
     # * https://travis-ci.org/NeroBurner/hunter/jobs/458574462
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=analyze-cxx17
-    #    PROJECT_DIR=examples/ceres-solver
+    - os: linux
+      env: >
+        TOOLCHAIN=analyze-cxx17
+        PROJECT_DIR=examples/ceres-solver
 
     # FIXME: issue with glog
     # * https://travis-ci.org/NeroBurner/hunter/jobs/458574463
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=sanitize-address-cxx17
-    #    PROJECT_DIR=examples/ceres-solver
+    - os: linux
+      env: >
+        TOOLCHAIN=sanitize-address-cxx17
+        PROJECT_DIR=examples/ceres-solver
 
     # FIXME: issue with glog
     # * https://travis-ci.org/NeroBurner/hunter/jobs/458574464
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=sanitize-leak-cxx17
-    #    PROJECT_DIR=examples/ceres-solver
+    - os: linux
+      env: >
+        TOOLCHAIN=sanitize-leak-cxx17
+        PROJECT_DIR=examples/ceres-solver
 
     # FIXME: issue with glog
     # * https://travis-ci.org/NeroBurner/hunter/jobs/458574465
     # - os: linux
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=sanitize-thread-cxx17
-    #    PROJECT_DIR=examples/ceres-solver
+    - os: linux
+      env: >
+        TOOLCHAIN=sanitize-thread-cxx17
+        PROJECT_DIR=examples/ceres-solver
 
     # }
 
@@ -133,28 +133,28 @@ matrix:
         PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=analyze-cxx17
-    #    PROJECT_DIR=examples/ceres-solver-suitesparse
+    - os: linux
+      env: >
+        TOOLCHAIN=analyze-cxx17
+        PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=sanitize-address-cxx17
-    #    PROJECT_DIR=examples/ceres-solver-suitesparse
+    - os: linux
+      env: >
+        TOOLCHAIN=sanitize-address-cxx17
+        PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=sanitize-leak-cxx17
-    #    PROJECT_DIR=examples/ceres-solver-suitesparse
+    - os: linux
+      env: >
+        TOOLCHAIN=sanitize-leak-cxx17
+        PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # FIXME: build without suitesparse is failing
-    #- os: linux
-    #  env: >
-    #    TOOLCHAIN=sanitize-thread-cxx17
-    #    PROJECT_DIR=examples/ceres-solver-suitesparse
+    - os: linux
+      env: >
+        TOOLCHAIN=sanitize-thread-cxx17
+        PROJECT_DIR=examples/ceres-solver-suitesparse
 
     # }
 
