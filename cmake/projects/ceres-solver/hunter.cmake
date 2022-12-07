@@ -76,6 +76,17 @@ hunter_add_version(
     868f7b45b127d4eb2777ce889e0d273bd11f5f73
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    ceres-solver
+    VERSION
+    "2.1.0-p0"
+    URL
+    "https://github.com/cpp-pm/ceres-solver/archive/refs/tags/v2.1.0-p0.tar.gz"
+    SHA1
+    9c1bcb08100acb95fac0ea3e5ffdf4990ae904d3
+)
+
 hunter_cmake_args(ceres-solver CMAKE_ARGS
     # explicitly remove dependency on gflags (only needed for tests)
     GFLAGS=OFF
@@ -83,6 +94,8 @@ hunter_cmake_args(ceres-solver CMAKE_ARGS
     LAPACK=OFF
     SUITESPARSE=OFF
     CXSPARSE=OFF # since 1.14.0-p0
+    # OpenBLAS flag, alternative to LAPACK since v2.1.0-p0
+    WITH_OPENBLAS=OFF
     # don't build tests
     BUILD_TESTING=OFF
     # also don't build examples: when suitesparse is enabled the examples need Fortran libraries
