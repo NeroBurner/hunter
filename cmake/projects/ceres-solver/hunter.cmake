@@ -84,7 +84,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/ceres-solver/archive/refs/tags/v2.1.0-p0.tar.gz"
     SHA1
-    9c1bcb08100acb95fac0ea3e5ffdf4990ae904d3
+    315d16137f08ed4b4ee303d505a6355f96b9a3aa
 )
 
 hunter_cmake_args(ceres-solver CMAKE_ARGS
